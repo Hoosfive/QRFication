@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QRFication</string>
+    <string name="loginBtn">LOG IN</string>
+    <string name="loginHint">Login</string>
+    <string name="passHint">Password</string>
+    <string name="registrationLabel"><u>Don\'t have account?</u></string>
+    <string name="lastNameHint">Last name</string>
+    <string name="firstNameHint">First name</string>
+    <string name="signInBtn">SIGN IN</string>
+    <string name="repeatPassHint">Repeat Password</string>
+</resources>

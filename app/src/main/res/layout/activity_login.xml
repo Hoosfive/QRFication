@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="ru.qrfication.QRFication.ui.LoginActivity">
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+        android:id="@+id/loginLayoutReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="16dp"
+        app:errorEnabled="true"
+        app:labelText="@string/loginHint"
+        app:panelBackgroundColor="@color/colorPrimary"
+        app:primaryColor="@color/colorAccent"
+        app:secondaryColor="@color/colorSecondary">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/loginLineReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:paddingStart="12dp"
+            android:paddingEnd="14dp"
+            android:singleLine="false"
+            android:textColor="@color/colorAccent" />
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+        android:id="@+id/passLayoutReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        app:endIcon="@drawable/ic_eye"
+        app:helperTextColor="@color/colorSecondary"
+        app:labelText="@string/passHint"
+        app:panelBackgroundColor="@color/someColor"
+        app:primaryColor="@color/colorAccent"
+        app:secondaryColor="@color/colorSecondary">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/passLineReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:paddingStart="12dp"
+            android:paddingEnd="14dp"
+            android:textColor="@color/colorAccent" />
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <RelativeLayout
+        android:id="@+id/loginBtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/colorLoginBtn"
+            android:text="@string/loginBtn"
+            android:textColor="@color/colorSecondary"
+            android:theme="@style/Ripple"
+            tools:targetApi="lollipop" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:indeterminateTint="@color/colorPrimary"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/registrationTV"
+        android:layout_width="133dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/registrationLabel"
+        android:textAllCaps="false"
+        android:textColor="@color/colorSecondary" />
+
+</LinearLayout>
+
