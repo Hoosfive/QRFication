@@ -3,5 +3,4 @@
     <style name="Ripple">
         <item name="colorControlHighlight">@color/colorRipple</item>
     </style>
-
 </resources>

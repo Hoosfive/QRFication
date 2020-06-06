@@ -1,11 +1,17 @@
 <resources>
     <string name="app_name">QRFication</string>
     <string name="loginBtn">LOG IN</string>
-    <string name="loginHint">Login</string>
+    <string name="loginHint">E-mail</string>
     <string name="passHint">Password</string>
     <string name="registrationLabel"><u>Don\'t have account?</u></string>
     <string name="lastNameHint">Last name</string>
     <string name="firstNameHint">First name</string>
     <string name="signInBtn">SIGN IN</string>
     <string name="repeatPassHint">Repeat Password</string>
+    <string name="signOutBtn">SIGN OUT</string>
+    <string name="streetHint">Street</string>
+    <string name="houseNumberHint">House Number</string>
+    <string name="okBtnText">OK</string>
+    <string name="qrGenerateSuccess">Success!</string>
+    <string name="timeArrivedText">Your car will arrive in 10 minutes</string> // %1$d - instead 10
 </resources>

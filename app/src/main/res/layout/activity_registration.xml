@@ -63,7 +63,7 @@
     </LinearLayout>
 
     <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
-        android:id="@+id/loginLayoutReg"
+        android:id="@+id/emailLayoutReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -75,10 +75,10 @@
         app:secondaryColor="@color/colorSecondary">
 
         <studio.carbonylgroup.textfieldboxes.ExtendedEditText
-            android:id="@+id/loginLineReg"
+            android:id="@+id/emailLineReg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="phone"
+            android:inputType="textEmailAddress"
             android:paddingStart="12dp"
             android:paddingEnd="14dp"
             android:singleLine="false"
@@ -94,7 +94,7 @@
         app:endIcon="@drawable/ic_eye"
         app:helperTextColor="@color/colorSecondary"
         app:labelText="@string/passHint"
-        app:panelBackgroundColor="@color/someColor"
+        app:panelBackgroundColor="@color/colorPrimary"
         app:primaryColor="@color/colorAccent"
         app:secondaryColor="@color/colorSecondary">
 
@@ -117,7 +117,7 @@
         app:endIcon="@drawable/ic_eye"
         app:helperTextColor="@color/colorSecondary"
         app:labelText="@string/repeatPassHint"
-        app:panelBackgroundColor="@color/someColor"
+        app:panelBackgroundColor="@color/colorPrimary"
         app:primaryColor="@color/colorAccent"
         app:secondaryColor="@color/colorSecondary">
 
