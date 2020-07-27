@@ -3,9 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/map"
     android:orientation="vertical"
-    tools:context=".ui.MainDisplayActivity">
+    tools:context=".ui.MainDisplayActivity"
+    android:id="@+id/MainDisplayActivity">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="ru.dublgis.dgismobile.mapsdk.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <FrameLayout
         android:id="@+id/frame"
@@ -14,19 +20,70 @@
 
 
         <RelativeLayout
-            android:id="@+id/signOutBtnLayout"
+            android:id="@+id/rightButtonsPanel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right">
+            >
+
             <Button
                 android:id="@+id/signOutBtn"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 android:backgroundTint="@color/colorOpacityPlusDark"
                 android:text="@string/signOutBtn"
                 android:textColor="@color/colorBottomSheetTFBackground"
                 android:theme="@style/Ripple"
                 tools:targetApi="lollipop" />
+
+            <ImageButton
+                android:id="@+id/zoom_in"
+                android:layout_width="@dimen/map_control"
+                android:layout_height="@dimen/map_control"
+                android:layout_below="@+id/signOutBtn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/map_control_btn"
+                android:elevation="2dp"
+                android:src="@drawable/zoom_in" />
+
+            <ImageButton
+                android:id="@+id/zoom_out"
+                android:layout_width="@dimen/map_control"
+                android:layout_height="@dimen/map_control"
+                android:layout_below="@+id/zoom_in"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/map_control_btn"
+                android:elevation="2dp"
+                android:src="@drawable/zoom_out" />
+
+            <ImageButton
+                android:id="@+id/location"
+                android:layout_width="@dimen/map_control"
+                android:layout_height="@dimen/map_control"
+                android:layout_below="@+id/zoom_out"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/map_control_btn"
+                android:elevation="2dp"
+                android:src="@drawable/location" />
+            <ImageButton
+                android:id="@+id/slideUpBottomSheet"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/map_control_btn"
+                android:elevation="2dp"
+
+                android:src="@drawable/ic_up_arrow" />
         </RelativeLayout>
 
     </FrameLayout>
@@ -54,8 +111,8 @@
                 android:id="@+id/closeQRBtn"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_gravity="right"
-                android:src="@drawable/ic_close"/>
+                android:layout_gravity="end"
+                android:src="@drawable/ic_close" />
 
             <ImageView
                 android:id="@+id/qrCodeImage"
@@ -63,7 +120,8 @@
                 android:layout_height="255dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="34dp"
-                android:layout_marginEnd="28dp" />
+                android:layout_marginEnd="28dp"
+                android:contentDescription="@string/qrCodeDescription" />
 
             <TextView
                 android:layout_width="wrap_content"

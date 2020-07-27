@@ -13,5 +13,6 @@
     <string name="houseNumberHint">House Number</string>
     <string name="okBtnText">OK</string>
     <string name="qrGenerateSuccess">Success!</string>
-    <string name="timeArrivedText">Your car will arrive in 10 minutes</string> // %1$d - instead 10
+    <string name="timeArrivedText">Your car will arrive in 10 minutes</string>     // %1$d - instead 10
+    <string name="qrCodeDescription">QR Code</string>
 </resources>

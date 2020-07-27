@@ -3,6 +3,7 @@ package ru.qrfication.QRFication.model
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
+import ru.qrfication.QRFication.domain.LocationBody
 import ru.qrfication.QRFication.model.response.UserInfoResponseBody
 
 class Preferences {
@@ -12,6 +13,8 @@ class Preferences {
         private const val EMAIL_PREFERENCES = "email"
         private const val FIRST_NAME_PREFERENCES = "firstName"
         private const val LAST_NAME_PREFERENCES = "lastName"
+        private const val LAST_LONGITUDE = "lastLongitude"
+        private const val LAST_LATITUDE = "lastLatitude"
         const val DEF_VALUE = "no_data_found"
         private lateinit var editor: SharedPreferences.Editor
 
@@ -70,6 +73,23 @@ class Preferences {
                     LAST_NAME_PREFERENCES,
                     DEF_VALUE
                 ).toString()
+            )
+        }
+
+        fun saveLastLocationPref(context: Context, lon: Double, lan: Double) {
+            editor = getPref(
+                context
+            ).edit()
+            editor.putFloat(LAST_LONGITUDE, lon.toFloat())
+            editor.putFloat(LAST_LATITUDE, lan.toFloat())
+            editor.apply()
+        }
+
+        fun getLastLocationPref(context: Context): LocationBody {
+            val pref = getPref(context)
+            return LocationBody(
+                pref.getFloat(LAST_LONGITUDE, 55.30771F).toDouble(),
+                pref.getFloat(LAST_LATITUDE, 25.20314F).toDouble()
             )
         }
     }

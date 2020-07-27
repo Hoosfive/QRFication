@@ -8,7 +8,7 @@ import studio.carbonylgroup.textfieldboxes.TextFieldBoxes
 class PassBtnController {
     companion object {
         const val TEXT_PASS = InputType.TYPE_TEXT_VARIATION_PASSWORD + 1
-        const val TEXT_PASS_VISIBLE = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD + 1
+        private const val TEXT_PASS_VISIBLE = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD + 1
 
         fun togglePasswordVisibility(passLine: ExtendedEditText, passLayout: TextFieldBoxes) {
             val selection = passLine.selectionEnd
