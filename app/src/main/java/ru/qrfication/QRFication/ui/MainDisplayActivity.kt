@@ -86,7 +86,7 @@ class MainDisplayActivity : AppCompatActivity() {
             qrCodeImage.setImageBitmap(decodedByte)
             //println(decodedString.toString() + "  shit   ")
         }, {
-            Toast.makeText(this, "POSHEL NAHUI EXCEPTION", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "QR Code Generation Exception", Toast.LENGTH_LONG).show()
         })
     }
 
